@@ -32,7 +32,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(window.innerWidth, window.innerHeight);
   frameRate(15);
    manImg = manImg2
  ;
@@ -58,7 +58,7 @@ function keyPressed(){
 function draw() {
   imageMode(CENTER);
   background('#0d02eb');
-  image(bgImage, windowWidth/2, windowHeight/2,windowWidth, windowHeight  );
+  image(bgImage, window.innerWidth/2, window.innerHeight/2,window.innerWidth, window.innerHeight  );
   image(bgVideo, width / 2, height / 2);
   bgVideo.play()
   fill(255);
@@ -96,7 +96,7 @@ function draw() {
     //background(255);
     //grow.pause();
     
-    image(bgImage, windowWidth/2, windowHeight/2,windowWidth, windowHeight  );
+    image(bgImage, window.innerWidth/2, window.innerHeight/2,window.innerWidth, window.innerHeight  );
   }
   
   function mousePressed() {
