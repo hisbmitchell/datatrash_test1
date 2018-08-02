@@ -34,6 +34,8 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   frameRate(15);
    manImg = manImg2
+  image(bgVideo, width / 2, height / 2);
+  bgVideo.play();
 
 }
 
@@ -104,7 +106,7 @@ function draw() {
     //image(grow, width / 2, height / 2);
     //grow.play();
     
-     image(bgVideo, width / 2, height / 2);
+    image(bgVideo, width / 2, height / 2);
     bgVideo.play();
 
   } else if (mouseX < 100 && mouseY > 100) {
@@ -147,8 +149,7 @@ function investMan(x, y, img) {
   this.display = function() {
     imageMode(CENTER)
     image(this.img, this.x, this.y);
-     image(bgVideo, width / 2, height / 2);
-    bgVideo.play();
+     
     
   }
 
