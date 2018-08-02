@@ -26,6 +26,7 @@ function preload() {
   grow.loop();
   grow.hide();
   
+  bgVideo.play();
   bgVideo.loop();
   bgVideo.hide();
   
@@ -106,6 +107,9 @@ function draw() {
 
 
   if (mouseX > 900 && mouseY > 100) {
+    
+     image(bgVideo, width / 2, 0);
+   
 
     //image(grow, width / 2, height / 2);
     //grow.play();
@@ -115,7 +119,8 @@ function draw() {
   } else if (mouseX < 100 && mouseY > 100) {
     //background(255);
     //grow.pause();
-    image(bg, 500, 200);
+    
+    image(bgImage, displayWidth/2, displayHeight/2,displayWidth, displayHeight  );
   }
 
 
