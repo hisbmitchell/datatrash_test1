@@ -48,34 +48,7 @@ function keyPressed(){
 }
 }
 
-function mousePressed() {
-  
-  
-   
 
-
-
-  if (bool === true) {
-    
-    
-    
-   
-
-    manImg = manImg1;
-
-    bool = false;
-    
-    println("cool!");
-    
-  } else {
-    println("notcool...");
-    
-    manImg = manImg2;
-
-    bool = true;
-  }
-
-}
 
 
 
@@ -125,6 +98,35 @@ function draw() {
     
     image(bgImage, displayWidth/2, displayHeight/2,displayWidth, displayHeight  );
   }
+  
+  function mousePressed() {
+  
+  
+   
+
+
+
+  if (bool === true) {
+    
+    
+    
+   
+
+    manImg = manImg1;
+
+    bool = false;
+    
+    println("cool!");
+    
+  } else {
+    println("notcool...");
+    
+    manImg = manImg2;
+
+    bool = true;
+  }
+
+}
 
 
 
