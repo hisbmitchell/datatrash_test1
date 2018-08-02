@@ -59,7 +59,7 @@ function draw() {
   imageMode(CENTER);
   background('#0d02eb');
   image(bgImage, window.innerWidth/2, window.innerHeight/2,window.innerWidth, window.innerHeight  );
-  image(bgVideo, width / 2, height / 2);
+  //image(bgVideo, width / 2, height / 2);
   bgVideo.play()
   fill(255);
   textSize(36);
