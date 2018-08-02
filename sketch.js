@@ -21,10 +21,10 @@ function preload() {
   bgImage = loadImage('assets/deathscreen3.jpg');
   bgVideo = createVideo('assets/bgVideo1.mp4');
 
-  grow = createVideo('assets/zoom_1.mp4');
+//   grow = createVideo('assets/zoom_1.mp4');
 
-  grow.loop();
-  grow.hide();
+//   grow.loop();
+//   grow.hide();
   
   bgVideo.play();
   bgVideo.loop();
@@ -108,7 +108,7 @@ function draw() {
 
   if (mouseX > 900 && mouseY > 100) {
     
-     image(bgVideo, width / 2, 0);
+     image(bgVideo, width / 2, height / 2);
    
 
     //image(grow, width / 2, height / 2);
