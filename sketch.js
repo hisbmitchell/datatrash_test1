@@ -71,7 +71,7 @@ function keyPressed(){
 }
 
 function draw() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
   background('#0d02eb');
   image(bgImage, windowWidth/2, windowHeight/2, windowWidth, windowHeight  );
@@ -83,7 +83,7 @@ function draw() {
   }
     
      function windowResized(){
-        resizeCanvas(window.innerWidth, window.innerHeight);
+        resizeCanvas(windowWidth, windowHeight);
         bgVideo.size(windowHeight*2, 300);
 }
     
