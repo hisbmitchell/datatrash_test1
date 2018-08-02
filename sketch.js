@@ -7,6 +7,7 @@ var manInvest;
 var current;
 var manImg;
 var bool = true;
+var bool2 = true;
 
 var bgImage;
 var bgVideo;
@@ -21,6 +22,7 @@ function preload() {
   
   bgImage = loadImage('assets/deathscreen3.jpg');
   bgVideo = createVideo('assets/bgVideo2.mov');
+  
 
 //   grow = createVideo('assets/zoom_1.mp4');
 
@@ -33,20 +35,33 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  
   frameRate(15);
    manImg = manImg2
- ;
+   bgVideo.size(windowHeight*2, 300);
+   
+ 
 }
 
 function keyPressed(){
   if (keyCode === ENTER) {
-
     
+     if (bool2 === true) {
     pressEnter = 1;
-    
 
-    }
+    bool2 = false;
+    
+    println("YES_VIDEO");
+    
+  } else {
+    println("NO_VIDEO");
+    
+    pressEnter = 0;
+
+    bool2 = true;
+  }
+  }
+
     
     for (i = 0; i <= investMen.length; i++) {
     
@@ -56,13 +71,21 @@ function keyPressed(){
 }
 
 function draw() {
+  createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
   background('#0d02eb');
-  image(bgImage, window.innerWidth/2, window.innerHeight/2, window.innerWidth, window.innerHeight  );
+  image(bgImage, windowWidth/2, windowHeight/2, windowWidth, windowHeight  );
   if (pressEnter == 1){
     background(0);
     bgVideo.play();
-    image(bgVideo, width / 2, height / 2);}
+    image(bgVideo, width / 2, height / 2);
+    
+  }
+    
+     function windowResized(){
+        resizeCanvas(windowWidth, windowHeight);
+        bgVideo.size(windowHeight*2, 300);
+}
     
     
     
@@ -90,7 +113,7 @@ function draw() {
     //background(255);
     //grow.pause();
     
-    image(bgImage, window.innerWidth/2, window.innerHeight/2,window.innerWidth, window.innerHeight  );
+    image(bgImage, windowWidth/2, windowHeight/2,windowWidth, windowHeight  );
   }
   
   function mousePressed() {
@@ -142,5 +165,7 @@ function investMan(x, y, img) {
      
     
   }
+  
+ 
 
 }
