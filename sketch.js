@@ -55,8 +55,7 @@ function mousePressed() {
 
   if (bool === true) {
     
-    image(bgVideo, width / 2, height / 2);
-    grow.play();
+   
 
     manImg = manImg1;
 
@@ -148,6 +147,8 @@ function investMan(x, y, img) {
   this.display = function() {
     imageMode(CENTER)
     image(this.img, this.x, this.y);
+     image(bgVideo, width / 2, height / 2);
+    bgVideo.play();
     
   }
 
