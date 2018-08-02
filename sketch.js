@@ -18,7 +18,7 @@ function preload() {
   bg = loadImage('assets/2draw.jpg');
   
   bgImage = loadImage('assets/deathscreen3.jpg');
-  bgVideo = createVideo('assets/bgVideo.mp4');
+  bgVideo = createVideo('assets/bgVideo1.mp4');
 
   grow = createVideo('assets/zoom_1.mp4');
 
