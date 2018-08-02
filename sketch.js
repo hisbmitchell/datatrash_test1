@@ -84,8 +84,8 @@ function draw() {
   imageMode(CENTER);
   background('#0d02eb');
   image(bgImage, displayWidth/2, displayHeight/2,displayWidth, displayHeight  );
-  image(bgVideo, width / 2, height / 2);
-  bgVideo.play()
+  //image(bgVideo, width / 2, height / 2);
+  //bgVideo.play()
   fill(255);
   textSize(36);
   textFont('Courier');
@@ -105,10 +105,10 @@ function draw() {
 
   if (mouseX > 900 && mouseY > 100) {
 
-    image(grow, width / 2, height / 2);
-    grow.play();
+    //image(grow, width / 2, height / 2);
+    //grow.play();
     
-    image(bgVideo, width / 2, height / 2);
+    image(bgVideo, width / 2, 0);
     bgVideo.play();
 
   } else if (mouseX < 100 && mouseY > 100) {
