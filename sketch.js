@@ -10,16 +10,17 @@ var bool = true;
 
 var bgImage;
 var bgVideo;
+var pressEnter = 0;
 
 
 function preload() {
 
-  manImg1 = loadImage('assets/invest0.png');
-  manImg2 = loadImage('assets/invest2.png');
+  manImg1 = loadImage('assets/Trash1.gif');
+  manImg2 = loadImage('assets/Trash.gif');
   bg = loadImage('assets/2draw.jpg');
   
   bgImage = loadImage('assets/deathscreen3.jpg');
-  bgVideo = createVideo('assets/bgVideo1.mp4');
+  bgVideo = createVideo('assets/bgVideo2.mov');
 
 //   grow = createVideo('assets/zoom_1.mp4');
 
@@ -36,31 +37,37 @@ function setup() {
   frameRate(15);
    manImg = manImg2
  ;
-
 }
 
 function keyPressed(){
   if (keyCode === ENTER) {
-      for (i = 0; i <= investMen.length; i++) {
+
+    
+    pressEnter = 1;
+    
+
+    }
+    
+    for (i = 0; i <= investMen.length; i++) {
     
     investMen[i].clear();
+    
       }
 }
-}
-
-
-
-
-
-
-
 
 function draw() {
   imageMode(CENTER);
   background('#0d02eb');
-  image(bgImage, window.innerWidth/2, window.innerHeight/2,window.innerWidth, window.innerHeight  );
-  //image(bgVideo, width / 2, height / 2);
-  bgVideo.play()
+  image(bgImage, window.innerWidth/2, window.innerHeight/2, window.innerWidth, window.innerHeight  );
+  if (pressEnter == 1){
+    background(0);
+    bgVideo.play();
+    image(bgVideo, width / 2, height / 2);}
+    
+    
+    
+  
+  
   fill(255);
   textSize(36);
   textFont('Courier');
@@ -68,8 +75,6 @@ function draw() {
  // text('Unknown error', 50, 90);
   //println ('mousex:'+mouseX+'mouseY:'+mouseY);
   
- 
-
 
   var xPos = mouseX;
   var yPos = mouseY;
@@ -79,19 +84,8 @@ function draw() {
 
 
   if (mouseX > 900 && mouseY > 100) {
-    
-    
-     bgVideo.play();    
-     image(bgVideo, width / 2, height / 2);
-    
-    
-   
-
     //image(grow, width / 2, height / 2);
     //grow.play();
-    
-   
-
   } else if (mouseX < 100 && mouseY > 100) {
     //background(255);
     //grow.pause();
@@ -100,18 +94,7 @@ function draw() {
   }
   
   function mousePressed() {
-  
-  
-   
-
-
-
   if (bool === true) {
-    
-    
-    
-   
-
     manImg = manImg1;
 
     bool = false;
@@ -128,11 +111,7 @@ function draw() {
 
 }
 
-
-
-
-
-  for (i = 0; i < investMen.length; i++) {
+for (i = 0; i < investMen.length; i++) {
     
     investMen[i].display();
    
@@ -156,8 +135,6 @@ function investMan(x, y, img) {
       investMen.pop(investMen[i]);
     }
   }
-
-
 
   this.display = function() {
     imageMode(CENTER)
