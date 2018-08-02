@@ -107,9 +107,11 @@ function draw() {
 
   if (mouseX > 900 && mouseY > 100) {
     
+    
+     bgVideo.play();    
      image(bgVideo, width / 2, height / 2);
     
-    bgVideo.play();
+    
    
 
     //image(grow, width / 2, height / 2);
