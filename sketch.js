@@ -57,6 +57,8 @@ function mousePressed() {
 
   if (bool === true) {
     
+    
+    
    
 
     manImg = manImg1;
@@ -108,8 +110,7 @@ function draw() {
     //image(grow, width / 2, height / 2);
     //grow.play();
     
-    image(bgVideo, width / 2, 0);
-    bgVideo.play();
+   
 
   } else if (mouseX < 100 && mouseY > 100) {
     //background(255);
