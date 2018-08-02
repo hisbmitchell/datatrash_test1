@@ -106,7 +106,7 @@ function draw() {
     grow.play();
     
      image(bgVideo, width / 2, height / 2);
-    grow.play();
+    bgVideo.play();
 
   } else if (mouseX < 100 && mouseY > 100) {
     //background(255);
